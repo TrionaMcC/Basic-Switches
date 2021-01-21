@@ -26,6 +26,9 @@ public class ManualSwitchController : MonoBehaviour
     // switchAnimator will hold the gameobjects Animator
     private Animator switchAnimator;
 
+    public bulbController bulb;
+    private bool bulbOn = false;
+
     // The Awake function of each class is called before the Start function. It is
     // here you should initialise class properties/variables like those above.
     void Awake()
@@ -76,6 +79,8 @@ public class ManualSwitchController : MonoBehaviour
         {
             switchOff = !switchOff;
             switchAnimator.SetBool("SwitchOff", switchOff);
+            bulb.bulbOn = !bulb.bulbOn;
+            bulb.FlipBulb();
         }
         else
         {

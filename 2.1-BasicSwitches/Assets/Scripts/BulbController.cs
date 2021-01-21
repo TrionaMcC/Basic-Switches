@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulbController : MonoBehaviour
+public class bulbController : MonoBehaviour
 {
-    void Start()
-    {
-        public Animator BulbAnimator;
-    }
+    public Animator bulbAnimator;
+    public bool bulbOn = false;
 
-    public void TurnOn()
+    public void FlipBulb()
     {
-        
-    }
-
-    public void TurnOff()
-    {
-
+        bulbAnimator.SetBool("BulbOn", bulbOn);
     }
 }
